@@ -1,5 +1,5 @@
 {
-  "name": "qwertycoin-rpc",
+  "name": "qwertycoin-nodejs-rpc",
   "version": "0.12.4",
   "description": "Qwertycoin RPC API Interface in NodeJS",
   "main": "index.js",

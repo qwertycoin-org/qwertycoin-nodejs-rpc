@@ -20,14 +20,14 @@ This project is designed to make it very easy to interact with various RPC APIs 
 ## Installation
 
 ```bash
-npm install qwertycoin-rpc
+npm install qwertycoin-nodejs-rpc
 ```
 
 ## Intialization
 
 ### Qwertycoind
 ```javascript
-const Qwertycoind = require('qwertycoin-rpc').Qwertycoind
+const Qwertycoind = require('qwertycoin-nodejs-rpc').Qwertycoind
 
 const daemon = new Qwertycoind({
   host: '127.0.0.1', // ip address or hostname of the Qwertycoind host
@@ -39,7 +39,7 @@ const daemon = new Qwertycoind({
 
 ### QwertyService
 ```javascript
-const QwertyService = require('qwertycoin-rpc').QwertyService
+const QwertyService = require('qwertycoin-nodejs-rpc').QwertyService
 
 const service = new QwertyService({
   host: '127.0.0.1', // ip address or hostname of the qwerty-service host
@@ -61,7 +61,7 @@ const service = new QwertyService({
 
 ### Client
 ```javascript
-const Client = require('qwertycoin-rpc').Client
+const Client = require('qwertycoin-nodejs-rpc').Client
 
 const client = new Client({
   host: '127.0.0.1', // ip address or hostname of the Qwertycoind host
