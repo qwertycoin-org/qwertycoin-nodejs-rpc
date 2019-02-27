@@ -1,6 +1,6 @@
 {
   "name": "qwertycoin-nodejs-rpc",
-  "version": "0.8.9",
+  "version": "0.8.10",
   "description": "Qwertycoin RPC API Interface in NodeJS",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/qwertycoin-org/qwertycoin-nodejs-rpc/issues"
   },
-  "homepage": "https://github.com/qwertycoin-org/qwertycoin-nodejs-rpc#readme",
+  "homepage": "https://qwertycoin.org/",
   "dependencies": {
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5"

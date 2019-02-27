@@ -28,12 +28,12 @@ npm install qwertycoin-nodejs-rpc
 
 ## Intialization
 
-### Qwertycoind
+### QwertyCoind
 ```javascript
-const Qwertycoind = require('qwertycoin-nodejs-rpc').Qwertycoind
+const Qwertycoind = require('qwertycoin-nodejs-rpc').QwertyCoind
 
 const daemon = new Qwertycoind({
-  host: '127.0.0.1', // ip address or hostname of the Qwertycoind host
+  host: '127.0.0.1', // ip address or hostname of the QwertyCoind host
   port: 8197, // what port is the RPC server running on
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
