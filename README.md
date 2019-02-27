@@ -1,6 +1,8 @@
-[![Build Status](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc.png?branch=master)](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc) [![Build Status](https://ci.appveyor.com/api/projects/status/github/qwertycoin-org/qwertycoin-nodejs-rpc?branch=master&svg=true)](https://ci.appveyor.com/project/qwertycoin-org/qwertycoin-nodejs-rpc/branch/master)
-
 # Qwertycoin RPC API fork of TurtleCoin RPC API
+
+[![NPM](https://nodei.co/npm/qwertycoin-nodejs-rpc.png?downloads=true&stars=true)](https://nodei.co/npm/qwertycoin-nodejs-rpc/)
+
+[![Build Status](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc.png?branch=master)](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc) [![Build Status](https://ci.appveyor.com/api/projects/status/github/qwertycoin-org/qwertycoin-nodejs-rpc?branch=master&svg=true)](https://ci.appveyor.com/project/qwertycoin-org/qwertycoin-nodejs-rpc/branch/master)
 
 This project is designed to make it very easy to interact with various RPC APIs available within the [Qwertycoin](https://qwertycoin.org) Project. This entire project uses [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) to make things fast, easy, and safe.
 
