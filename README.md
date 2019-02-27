@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/qwertycoin-org/qwertycoin-rpc.png?branch=master)](https://travis-ci.org/qwertycoin-org/qwertycoin-rpc) [![Build Status](https://ci.appveyor.com/api/projects/status/github/qwertycoin-org/qwertycoin-rpc?branch=master&svg=true)](https://ci.appveyor.com/project/qwertycoin-org/qwertycoin-rpc/branch/master)
+[![Build Status](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc.png?branch=master)](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc) [![Build Status](https://ci.appveyor.com/api/projects/status/github/qwertycoin-org/qwertycoin-nodejs-rpc?branch=master&svg=true)](https://ci.appveyor.com/project/qwertycoin-org/qwertycoin-nodejs-rpc/branch/master)
 
 # Qwertycoin RPC API fork of TurtleCoin RPC API
 
