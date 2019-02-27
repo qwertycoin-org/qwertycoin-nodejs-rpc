@@ -4,7 +4,7 @@
 
 'use strict'
 
-module.exports.Qwertycoind = require('./lib/qwertycoincoind-rpc.js')
+module.exports.Qwertycoind = require('./lib/qwertycoind-rpc.js')
 module.exports.QwertyService = require('./lib/service-rpc.js')
 
 // These exports will be deprecated in a future version.
