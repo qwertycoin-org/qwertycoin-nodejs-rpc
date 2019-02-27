@@ -50,12 +50,12 @@ const service = new QwertyService({
 
   // RPC API default values
   defaultMixin: false, // the default mixin to use for transactions, the default setting is false which means we don't have a default value
-  defaultFee: 0.1, // the default transaction fee for transactions
+  defaultFee: 100000000, // the default transaction fee for transactions
   defaultBlockCount: 1, // the default number of blocks when blockCount is required
-  decimalDivisor: 100, // Currency has many decimal places?
+  decimalDivisor: 100000000, // Currency has many decimal places?
   defaultFirstBlockIndex: 1, // the default first block index we will use when it is required
   defaultUnlockTime: 0, // the default unlockTime for transactions
-  defaultFusionThreshold: 10000000, // the default fusionThreshold for fusion transactions
+  defaultFusionThreshold: 100000, // the default fusionThreshold for fusion transactions
 })
 ```
 
@@ -91,7 +91,7 @@ Returns information on the last 30 blocks before *height* (inclusive).
 
 ```javascript
 daemon.getBlocks({
-  height: 500000
+  height: 50000
 }).then((blocks) => {
   // do something
 })
@@ -103,27 +103,27 @@ daemon.getBlocks({
 [
   {
     "cumul_size": 22041,
-    "difficulty": 285124963,
-    "hash": "62f0058453292af5e1aa070f8526f7642ab6974c6af2c17088c21b31679c813d",
-    "height": 500000,
+    "difficulty": 100000,
+    "hash": "5599ca3d8ac58f377187b5a43c00103496244ec95299e4ae3dff3be6016488bf",
+    "height": 50000,
     "timestamp": 1527834137,
     "tx_count": 4
   },
   {
     "cumul_size": 384,
-    "difficulty": 258237161,
-    "hash": "74a45602da61b8b8ff565b1c81c854416046a23ca53f4416684ffaa60bc50796",
-    "height": 499999,
+    "difficulty": 100000,
+    "hash": "eaa0a8d0bbc5c74f115abd7a2afbe3252dc18ecfba51f9227f7dc9a6d8502e40",
+    "height": 49999,
     "timestamp": 1527834031,
     "tx_count": 1
   },
   {
     "cumul_size": 418,
-    "difficulty": 256087255,
-    "hash": "ed628ff13eacd5b99c5d7bcb3aeb29ef8fc61dbb21d48b65e0cdaf5ab21211c1",
-    "height": 499998,
+    "difficulty": 100000,
+    "hash": "e7fd0a581ab89d9e11d5feb9ea9dc5b5bf226cbc4623023a35cb75eb28d924b1",
+    "height": 49998,
     "timestamp": 1527834020,
-    "tx_count": 1
+    "tx_count": 3
   }
 ]
 ```
@@ -142,7 +142,7 @@ Returns information on a single block
 
 ```javascript
 daemon.getBlock({
-  hash: 'f11580d74134ac34673c74f8da458080aacbe1eccea05b197e9d10bde05139f5'
+  hash: '5599ca3d8ac58f377187b5a43c00103496244ec95299e4ae3dff3be6016488bf'
 }).then((block) => {
   // do something
 })
@@ -159,14 +159,14 @@ daemon.getBlock({
   "depth": 0,
   "difficulty": 358164537,
   "effectiveSizeMedian": 100000,
-  "hash": "f11580d74134ac34673c74f8da458080aacbe1eccea05b197e9d10bde05139f5",
+  "hash": "5599ca3d8ac58f377187b5a43c00103496244ec95299e4ae3dff3be6016488bf",
   "height": 501854,
   "major_version": 4,
   "minor_version": 0,
   "nonce": 214748383,
   "orphan_status": false,
   "penalty": 0,
-  "prev_hash": "674046ea53a8673c630bd34655c4723199e69fdcfd518503f4c714e16a7121b5",
+  "prev_hash": "eaa0a8d0bbc5c74f115abd7a2afbe3252dc18ecfba51f9227f7dc9a6d8502e40",
   "reward": 2936608,
   "sizeMedian": 231,
   "timestamp": 1527891820,
