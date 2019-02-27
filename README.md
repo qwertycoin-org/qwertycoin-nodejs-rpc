@@ -1,54 +1,52 @@
-[![NPM](https://nodei.co/npm/turtlecoin-rpc.png?downloads=true&stars=true)](https://nodei.co/npm/turtlecoin-rpc/)
+[![Build Status](https://travis-ci.org/qwertycoin-org/qwertycoin-rpc.png?branch=master)](https://travis-ci.org/qwertycoin-org/qwertycoin-rpc) [![Build Status](https://ci.appveyor.com/api/projects/status/github/qwertycoin-org/qwertycoin-rpc?branch=master&svg=true)](https://ci.appveyor.com/project/qwertycoin-org/qwertycoin-rpc/branch/master)
 
-[![Build Status](https://travis-ci.org/brandonlehmann/turtlecoin-rpc.png?branch=master)](https://travis-ci.org/brandonlehmann/turtlecoin-rpc) [![Build Status](https://ci.appveyor.com/api/projects/status/github/brandonlehmann/turtlecoin-rpc?branch=master&svg=true)](https://ci.appveyor.com/project/brandonlehmann/turtlecoin-rpc/branch/master)
+# Qwertycoin RPC API fork of TurtleCoin RPC API
 
-# TurtleCoin RPC API
-
-This project is designed to make it very easy to interact with various RPC APIs available within the [TurtleCoin](https://turtlecoin.lol) Project. This entire project uses [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) to make things fast, easy, and safe.
+This project is designed to make it very easy to interact with various RPC APIs available within the [Qwertycoin](https://qwertycoin.org) Project. This entire project uses [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) to make things fast, easy, and safe.
 
 ## Table of Contents
 
 1. [Dependencies](#dependencies)
 2. [Installation](#installation)
 3. [Intialization](#intialization)
-4. [TurtleCoind RPC API Interface](#turtlecoind-rpc-api-interface)
-5. [TurtleService RPC API Interface](#turtleservice-rpc-api-interface)
+4. [Qwertycoind RPC API Interface](#qwertycoind-rpc-api-interface)
+5. [QwertyService RPC API Interface](#qwertyservice-rpc-api-interface)
 
 ## Dependencies
 
 * [NodeJS v8.x](https://nodejs.org) >= 8.x
-* [TurtleCoin](https://github.com/turtlecoin/turtlecoin/releases) >= v0.8.4
+* [Qwertycoin](https://github.com/qwertycoin-org/qwertycoin/releases) >= v5.0.1
 
 ## Installation
 
 ```bash
-npm install turtlecoin-rpc
+npm install qwertycoin-rpc
 ```
 
 ## Intialization
 
-### TurtleCoind
+### Qwertycoind
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
+const Qwertycoind = require('qwertycoin-rpc').Qwertycoind
 
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
+const daemon = new Qwertycoind({
+  host: '127.0.0.1', // ip address or hostname of the Qwertycoind host
+  port: 8197, // what port is the RPC server running on
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
 })
 ```
 
-### TurtleService
+### QwertyService
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
+const QwertyService = require('qwertycoin-rpc').QwertyService
 
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
+const service = new QwertyService({
+  host: '127.0.0.1', // ip address or hostname of the qwerty-service host
+  port: 8070, // what port is qwerty-service running on
   timeout: 2000, // request timeout
   ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
+  rpcPassword: 'changeme', // must be set to the password used to run qwerty-service
 
   // RPC API default values
   defaultMixin: false, // the default mixin to use for transactions, the default setting is false which means we don't have a default value
@@ -63,19 +61,19 @@ const service = new TurtleService({
 
 ### Client
 ```javascript
-const Client = require('turtlecoin-rpc').Client
+const Client = require('qwertycoin-rpc').Client
 
 const client = new Client({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
+  host: '127.0.0.1', // ip address or hostname of the Qwertycoind host
+  port: 8197, // what port is the RPC server running on
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
 })
 ```
 
-## TurtleCoind RPC API Interface
+## Qwertycoind RPC API Interface
 
-We expose all of the `TurtleCoind` RPC API commands via the ```TurtleCoind``` interface. Each of the below methods are [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises). For safety sake, **always** handle your promise catches as we do use them properly.
+We expose all of the `Qwertycoind` RPC API commands via the ```Qwertycoind``` interface. Each of the below methods are [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises). For safety sake, **always** handle your promise catches as we do use them properly.
 
 Methods noted having options have parameters that may be *optional* or *required* as documented.
 
@@ -453,7 +451,7 @@ daemon.getBlockHash({
 ```javascript
 daemon.getBlockTemplate({
   reserveSize: 200,
-  walletAddress: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
+  walletAddress: 'QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ'
 }).then((blockTemplate) => {
   // do something
 })
@@ -774,7 +772,7 @@ daemon.fee().then((result) => {
 
 ```javascript
 {
-  "address": "TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ",
+  "address": "QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ",
   "amount": 100,
   "status": "OK"
 }
@@ -2609,9 +2607,9 @@ daemon.getTransactionsStatus({
 }
 ```
 
-## TurtleService RPC API Interface
+## QwertyService RPC API Interface
 
-We expose all of the `turtle-service` RPC API commands via the ```TurtleService``` interface. Each of the below methods are [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises). For safety sake, **always** handle your promise catches as we do use them properly.
+We expose all of the `qwerty-service` RPC API commands via the ```QwertyService``` interface. Each of the below methods are [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises). For safety sake, **always** handle your promise catches as we do use them properly.
 
 ***Special Note:*** Any and all amounts/fees will already be in HUMAN readable units. DO NOT DIVIDE THEM AGAIN unless you've specified ```decimalDivisor``` as ```1``` in the options. You have been warned.
 
@@ -2698,7 +2696,7 @@ service.getViewKey().then((result) => {
 
 ```javascript
 service.getSpendKeys({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
+  address: 'QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ'
 }).then((result) => {
   // do something
 })
@@ -2725,7 +2723,7 @@ service.getSpendKeys({
 
 ```javascript
 service.getMnemonicSeed({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
+  address: 'QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ'
 }).then((result) => {
   // do something
 })
@@ -2819,7 +2817,7 @@ service.createAddress({
 
 ```javascript
 service.deleteAddress({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
+  address: 'QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ'
 }).then((result) => {
   // do something
 })
@@ -2837,7 +2835,7 @@ service.deleteAddress({
 
 ```javascript
 service.getBalance({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
+  address: 'QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ'
 }).then((result) => {
   // do something
 })
@@ -3000,7 +2998,7 @@ service.getTransactions({
 
 ```javascript
 service.getUnconfirmedTransactionHashes({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
+  address: 'QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ'
 }).then((result) => {
   // do something
 })
@@ -3084,7 +3082,7 @@ This method creates a transfer object designed to be used with *service.sendTran
 #### Example Code
 
 ```javascript
-var transfer = service.newTransfer('TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ', 1000000)
+var transfer = service.newTransfer('QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ', 1000000)
 ```
 
 ### service.sendTransaction(options)
@@ -3109,7 +3107,7 @@ var transfer = service.newTransfer('TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K
 ```javascript
 service.sendTransaction({
   transfers: [
-    service.newTransfer('TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ', 1000000)
+    service.newTransfer('QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ', 1000000)
   ],
   fee: 0.1,
   mixin: 7,
@@ -3148,7 +3146,7 @@ service.sendTransaction({
 ```javascript
 service.createDelayedTransaction({
   transfers: [
-    service.newTransfer('TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ', 1000000)
+    service.newTransfer('QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ', 1000000)
   ],
   fee: 0.1,
   mixin: 7,
@@ -3240,7 +3238,7 @@ service.sendDelayedTransaction({
 ```javascript
 service.sendFusionTransaction({
   mixin: 7,
-  destinationAddress: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
+  destinationAddress: 'QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ'
 }).then((result) => {
   // do something
 })
@@ -3269,7 +3267,7 @@ service.sendFusionTransaction({
 service.estimateFusion({
   threshold: 100000000,
   addresses:[
-    'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
+    'QWC1M4YRTfsBC3WkJB3awUW3pbA6bLHTXRbQ8UEy6hD9XB2fHqE48kvF4c2xPZWnt11AJNixtssF7U8XrpZMFMkE7pAkzkpfVJ'
   ]
 }).then((result) => {
   // do something
@@ -3283,33 +3281,6 @@ service.estimateFusion({
   "fusionReadyCount": 0,
   "totalOutputCount": 19
 }
-```
-
-### service.createIntegratedAddress(options)
-
-#### Method Parameters
-
-|Argument|Mandatory|Description|Format|
-|---|---|---|---|
-|address|Yes|The public wallet address|string|
-|paymentId|Yes|The paymentId to incorporate|string|
-
-#### Example Code
-
-```javascript
-service.createIntegratedAddress({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ',
-  paymentId: '80ec855eef7df4bce718442cabe086f19dfdd0d03907c7768eddb8eca8c5a667'
-}).then((result) => {
-  // do something
-})
-```
-
-#### Example Data
-
-```javascript
-TRTLTyPSXMZB5j2wbztMzRXu2rVCuNVLUb4WKARRZY9ficYWshMDy7p4MXEz24mkyb4KFDVksDj41XTJ4DC3c7P2SfRg3r5q1ve9x7x5tK
-
 ```
 
 ## License
