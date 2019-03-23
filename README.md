@@ -1,9 +1,10 @@
-# Qwertycoin RPC API fork of TurtleCoin RPC API
+![image](https://cdn.qwertycoin.org/images/press/other/qwc-github-3.png)
+#### Master Build Status
+[![Build Status](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc.svg?branch=master)](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc) [![Build status](https://ci.appveyor.com/api/projects/status/k2elrt1g844o7afs/branch/master?svg=true)](https://ci.appveyor.com/project/qwertycoin-org/qwertycoin-nodejs-rpc/branch/master)
 
 [![NPM](https://nodei.co/npm/qwertycoin-nodejs-rpc.png?downloads=true&stars=true)](https://nodei.co/npm/qwertycoin-nodejs-rpc/)
 
-#### Master Build Status
-[![Build Status](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc.svg?branch=master)](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc) [![Build status](https://ci.appveyor.com/api/projects/status/k2elrt1g844o7afs/branch/master?svg=true)](https://ci.appveyor.com/project/qwertycoin-org/qwertycoin-nodejs-rpc/branch/master)
+# Qwertycoin RPC API fork of TurtleCoin RPC API
 
 This project is designed to make it very easy to interact with various RPC APIs available within the [Qwertycoin](https://qwertycoin.org) Project. This entire project uses [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) to make things fast, easy, and safe.
 
@@ -3293,3 +3294,28 @@ Copyright (C) 2018 Brandon Lehmann, The TurtleCoin Developers
 
 Please see the included LICENSE file for more information.
 ```
+
+## Donate
+
+```
+QWC: QWC1K6XEhCC1WsZzT9RRVpc1MLXXdHVKt2BUGSrsmkkXAvqh52sVnNc1pYmoF2TEXsAvZnyPaZu8MW3S8EWHNfAh7X2xa63P7Y
+```
+```
+BTC: 1DkocMNiqFkbjhCmG4sg9zYQbi4YuguFWw
+```
+```
+ETH: 0xA660Fb28C06542258bd740973c17F2632dff2517
+```
+```
+BCH: qz975ndvcechzywtz59xpkt2hhdzkzt3vvt8762yk9
+```
+```
+XMR: 47gmN4GMQ17Veur5YEpru7eCQc5A65DaWUThZa9z9bP6jNMYXPKAyjDcAW4RzNYbRChEwnKu1H3qt9FPW9CnpwZgNscKawX
+```
+```
+ETN: etnkJXJFqiH9FCt6Gq2HWHPeY92YFsmvKX7qaysvnV11M796Xmovo2nSu6EUCMnniqRqAhKX9AQp31GbG3M2DiVM3qRDSQ5Vwq
+```
+
+#### Thanks
+
+Cryptonote Developers, Bytecoin Developers, Monero Developers, Karbo Developers, Qwertycoin Community
