@@ -1,6 +1,6 @@
 ![image](https://cdn.qwertycoin.org/images/press/other/qwc-github-3.png)
 #### Master Build Status
-[![Build Status](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc.svg?branch=master)](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc) [![Build status](https://ci.appveyor.com/api/projects/status/k2elrt1g844o7afs/branch/master?svg=true)](https://ci.appveyor.com/project/qwertycoin-org/qwertycoin-nodejs-rpc/branch/master)
+[![Build Status](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc.svg?branch=master)](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc) [![Build status](https://ci.appveyor.com/api/projects/status/k2elrt1g844o7afs/branch/master?svg=true)](https://ci.appveyor.com/project/qwertycoin/qwertycoin-nodejs-rpc/branch/master)
 
 [![NPM](https://nodei.co/npm/qwertycoin-nodejs-rpc.png?downloads=true&stars=true)](https://nodei.co/npm/qwertycoin-nodejs-rpc/)
 
