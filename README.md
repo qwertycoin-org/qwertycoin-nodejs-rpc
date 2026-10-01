@@ -1,3 +1,11 @@
+> [!CAUTION]
+> **ARCHIVED LEGACY RPC CLIENT — DO NOT USE FOR CURRENT SERVICES OR EXCHANGES.**
+> This wrapper targets retired RPC names, ports, and response contracts and is
+> not compatible with Qwertycoin v2. Do not use it for deposits, withdrawals,
+> wallet custody, or daemon automation. Integrate against the current,
+> revision-bound [RPC documentation](https://docs.qwertycoin.org/) and
+> [Core source](https://github.com/qwertycoin-org/qwertycoin) instead.
+
 ![image](https://cdn.qwertycoin.org/images/press/other/qwc-github-3.png)
 #### Master Build Status
 [![Build Status](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc.svg?branch=master)](https://travis-ci.org/qwertycoin-org/qwertycoin-nodejs-rpc) [![Build status](https://ci.appveyor.com/api/projects/status/k2elrt1g844o7afs/branch/master?svg=true)](https://ci.appveyor.com/project/qwertycoin/qwertycoin-nodejs-rpc/branch/master)
